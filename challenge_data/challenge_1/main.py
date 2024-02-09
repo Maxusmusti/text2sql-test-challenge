@@ -44,7 +44,7 @@ def evaluate(test_annotation_file, user_submission_file, phase_codename, **kwarg
         print("Evaluating for Dev Phase")
         output["result"] = [
             {
-                "train_split": {
+                "dev_split": {
                     "Eval": random.randint(0, 99),
                 }
             }
