@@ -1,5 +1,5 @@
 import random
-from spider_eval import evaluate_with_kmaps
+from .spider_eval import evaluate_with_kmaps
 
 def evaluate(test_annotation_file, user_submission_file, phase_codename, **kwargs):
     print("Starting Evaluation.....")
