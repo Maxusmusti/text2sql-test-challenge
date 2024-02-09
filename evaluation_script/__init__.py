@@ -33,7 +33,6 @@ def install_local_package(folder_name):
     ]
 )
 
-install("sqlite3")
 install("nltk")
 
 #install_local_package("package_folder_name")
