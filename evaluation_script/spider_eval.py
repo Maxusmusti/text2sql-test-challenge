@@ -26,7 +26,7 @@ import sqlite3
 import traceback
 import argparse
 
-from process_sql import tokenize, get_schema, get_tables_with_alias, Schema, get_sql
+from .process_sql import tokenize, get_schema, get_tables_with_alias, Schema, get_sql
 
 # Flag to disable value evaluation
 DISABLE_VALUE = True
@@ -848,6 +848,9 @@ def build_foreign_key_map_from_json(table):
 
 def evaluate_with_kmaps(gold, pred, db_dir, table, etype):
     assert etype in ["all", "exec", "match"], "Unknown evaluation method"
+
+    print(gold)
+    print(pred)
 
     kmaps = build_foreign_key_map_from_json(table)
 
