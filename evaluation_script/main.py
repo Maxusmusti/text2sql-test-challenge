@@ -47,7 +47,6 @@ def evaluate(test_annotation_file, user_submission_file, phase_codename, **kwarg
             test_annotation_file,
             user_submission_file,
             None,
-            "./tables.json",
             etype="exec"
         )
 
