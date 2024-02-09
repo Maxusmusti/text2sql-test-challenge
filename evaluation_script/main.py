@@ -1,5 +1,5 @@
 import random
-
+from spider_eval import evaluate_with_kmaps
 
 def evaluate(test_annotation_file, user_submission_file, phase_codename, **kwargs):
     print("Starting Evaluation.....")
@@ -42,10 +42,19 @@ def evaluate(test_annotation_file, user_submission_file, phase_codename, **kwarg
     output = {}
     if phase_codename == "dev":
         print("Evaluating for Dev Phase")
+
+        result = evaluate_with_kmaps(
+            test_annotation_file,
+            user_submission_file,
+            None,
+            None,
+            etype="exec"
+        )
+
         output["result"] = [
             {
                 "dev_split": {
-                    "Eval": random.randint(0, 99),
+                    "Eval": result,
                 }
             }
         ]
