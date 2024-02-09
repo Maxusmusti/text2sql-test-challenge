@@ -851,9 +851,9 @@ def evaluate_with_kmaps(gold, pred, db_dir, etype):
 
     print(gold)
     print(pred)
-    print(sys.argv[0])
+    print(__file__)
 
-    table = sys.argv[0].replace('spider_eval.py', 'tables.json')
+    table = __file__.replace('spider_eval.py', 'tables.json')
     print(table)
     kmaps = build_foreign_key_map_from_json(table)
 
