@@ -7,6 +7,7 @@ import os
 import subprocess
 import sys
 from pathlib import Path
+import nltk
 
 def install(package):
     # Install a pip python package
@@ -34,7 +35,7 @@ def install_local_package(folder_name):
 )
 
 install("nltk")
-
+nltk.download('punkt')
 #install_local_package("package_folder_name")
 
 from .main import evaluate
