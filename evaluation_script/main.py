@@ -46,7 +46,6 @@ def evaluate(test_annotation_file, user_submission_file, phase_codename, **kwarg
         result = evaluate_with_kmaps(
             test_annotation_file,
             user_submission_file,
-            None,
             etype="exec"
         )
 

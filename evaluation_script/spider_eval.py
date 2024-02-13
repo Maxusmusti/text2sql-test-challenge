@@ -846,13 +846,14 @@ def build_foreign_key_map_from_json(table):
         tables[entry['db_id']] = build_foreign_key_map(entry)
     return tables
 
-def evaluate_with_kmaps(gold, pred, db_dir, etype):
+def evaluate_with_kmaps(gold, pred, etype):
     assert etype in ["all", "exec", "match"], "Unknown evaluation method"
 
     print(gold)
     print(pred)
     print(__file__)
 
+    db_dir = __file__.replace('spider_eval.py', 'database')
     table = __file__.replace('spider_eval.py', 'tables.json')
     print(table)
     kmaps = build_foreign_key_map_from_json(table)
